@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { NavigationComponent } from './navigation/navigation.components';
 
 @NgModule({
   // изреждат се всички компоненти
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +19,4 @@ import { AppComponent } from './app.component';
   providers: [] ,
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
