@@ -12,15 +12,9 @@ type User = {
 })
 
 export class UserListComponent {
-  isToggle = false;
   users = [
     {name: 'Pesho',age: 18},
     {name: 'Mitko',age: 22},
     {name: 'Petya',age: 38},
   ] as User[];
-
-  handleClick(){
-    console.log('clicked');
-    this.isToggle =!  this.isToggle; 
-  }
 }
