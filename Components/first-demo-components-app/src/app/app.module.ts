@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { NavigationComponent } from './navigation/navigation.components';
 import { UserListComponent } from './user-list/user-list.component';
+import { PlaygroundComponent } from './playground/playground.component';
 
 @NgModule({
   // изреждат се всички компоненти
@@ -12,7 +13,8 @@ import { UserListComponent } from './user-list/user-list.component';
     AppComponent,
     NavComponent,
     NavigationComponent,
-    UserListComponent
+    UserListComponent,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule
