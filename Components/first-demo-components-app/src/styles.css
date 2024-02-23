@@ -5,4 +5,6 @@ h3{
 body{
     font-size: 25px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
