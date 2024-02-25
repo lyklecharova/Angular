@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { User } from './types/User';
 
 @Component({
@@ -15,4 +15,15 @@ export class AppComponent {
     { name: 'Pesho', age: 35 },
     { name: 'Petya', age: 28 },
   ];
+
+  addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
+    const user = {
+      name: inputName.value,
+      age: Number(inputAge.value),
+    };
+    this.users.push(user);
+
+    inputName.value = '';
+    inputAge.value = '';
+  }
 }
