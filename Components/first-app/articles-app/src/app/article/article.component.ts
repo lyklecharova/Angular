@@ -31,7 +31,7 @@ export class ArticleComponent {
       this.showReadMoreBtn = false;
       this.showHideBtn = true;
     }
-    this.articleDesc = this.articleDesc.slice(0, this.articleDescLen);
+    this.descToShow = this.articleDesc.substring (0, this.articleDescLen);
   }
   
 
