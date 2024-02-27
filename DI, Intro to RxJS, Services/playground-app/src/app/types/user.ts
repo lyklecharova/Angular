@@ -21,13 +21,16 @@ export interface Company {
   catchPhrase: string;
   bs: string;
 }
-export interface JsonPlaceHolderUser {
+
+export interface User2 {
   id: number;
   name: string;
   username: string;
   email: string;
-  address: Address;
   phone: string;
+}
+export interface JsonPlaceHolderUser extends User2 {
+  address: Address;
   website: string;
   company: Company;
 }
