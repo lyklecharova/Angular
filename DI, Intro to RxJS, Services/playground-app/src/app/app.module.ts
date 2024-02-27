@@ -6,15 +6,9 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserListComponent,
-    UserItemComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, UserListComponent, UserItemComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
