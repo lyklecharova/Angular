@@ -1,4 +1,8 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 import { User } from './types/user';
 
 @Component({
@@ -15,10 +19,16 @@ export class AppComponent {
     { name: 'Petya', age: 40 },
   ];
 
-  constructor() {
-    setTimeout(() => {
-      this.title = 'Changed from Angular!';
-    }, 3000);
+  addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
+    const user: User = {
+      name: inputName.value,
+      age: Number(inputAge.value),
+    };
+    this.users.push(user);
+    // this.users = [...this.users, user];
+
+    inputName.value = '';
+    inputAge.value = '';
   }
 
   // constructor(private cd: ChangeDetectorRef){
