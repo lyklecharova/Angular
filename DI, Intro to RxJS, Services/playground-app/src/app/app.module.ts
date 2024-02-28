@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 @NgModule({
   declarations: [AppComponent, UserListComponent, UserItemComponent],
   imports: [BrowserModule],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
