@@ -1,17 +1,17 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { User } from './types/user';
+import { JsonPlaceHolderUser, User } from './types/user';
 
 @Injectable()
 export class UserService implements OnDestroy {
-  users: User[] = [
-    { name: 'Pesho', age: 10 },
-    { name: 'Ivan', age: 20 },
-    { name: 'Mitko', age: 30 },
-    { name: 'Petya', age: 40 },
-  ];
+  URL = 'https://jsonplaceholder.typicode.com/users';
+  users: JsonPlaceHolderUser[] = [];
 
   ngOnDestroy(): void {
     // clear terminal, detach from events
+  }
+
+  getUsers(){
+    return fetch(this.URL).then(res => res.json());
   }
 
   addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
@@ -19,7 +19,7 @@ export class UserService implements OnDestroy {
       name: inputName.value,
       age: Number(inputAge.value),
     };
-    this.users.push(user);
+    // this.users.push(user);
     // this.users = [...this.users, user];
 
     inputName.value = '';

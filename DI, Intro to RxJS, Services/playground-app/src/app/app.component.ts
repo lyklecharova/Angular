@@ -2,8 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  OnInit,
 } from '@angular/core';
-import { User } from './types/user';
+import { JsonPlaceHolderUser, User } from './types/user';
 import { UserService } from './user.service';
 
 @Component({
@@ -12,9 +13,20 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css'],
   providers: [UserService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'playground-app';
-  constructor(public userService: UserService) {}
+  appUsers: JsonPlaceHolderUser[] = [];
+
+  constructor(public userService: UserService) {
+    this.appUsers = this.userService.users
+  };
+
+  ngOnInit(): void {
+    this.userService.getUsers().then(users =>{
+    console.log('users data', users);
+    this.appUsers = users;
+    });
+  }
 
   setUsers(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
     // Validation of inputs, Transformation of the inputs
