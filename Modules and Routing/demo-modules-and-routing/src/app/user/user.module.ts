@@ -4,6 +4,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserResolver } from './user-detail/user-detail.resolver';
 
 @NgModule({
   declarations: [UserListComponent, UserDetailComponent],
@@ -18,6 +19,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 
       {
         path: 'user/detail/:id',
+        resolve: { user: UserResolver },
         component: UserDetailComponent,
       },
     ]),
