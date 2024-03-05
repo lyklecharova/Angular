@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserListComponent } from './user/user-list/user-list.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
 
 // configuration routes
 const routes: Routes = [
-  { path: '',pathMatch: "full", redirectTo: 'user-list'},
-  { path: 'user-list', component:UserListComponent},
+  { path: '',pathMatch: "full", redirectTo: 'user/list'},
   { path: 'todo-list', component:TodoListComponent},
 ];
 
