@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { User } from 'src/app/types/user';
 import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.service';
+import { User } from 'src/app/types/user';
 
 @Component({
   selector: 'app-user-list',
@@ -10,19 +10,35 @@ import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.se
 })
 export class UserListComponent implements OnInit {
   userList: User[] = [];
+
   constructor(
     private userService: UserService,
     private globalLoaderService: GlobalLoaderService
   ) {}
 
   ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
     this.globalLoaderService.showLoader();
 
-    setTimeout(() => {
-      this.userService.fetchUsers().subscribe((users) => {
+    // for testing purpouses
+    // setTimeout(() => {
+    this.userService.fetchUsers().subscribe({
+      next: (users) => {
         this.userList = users;
         this.globalLoaderService.hideLoader();
-      });
-    }, 3000);
+      },
+      error: (error) => {
+        console.error(`Error: ${error}`);
+        this.globalLoaderService.hideLoader();
+      },
+    });
+    // }, 3000);
+  }
+
+  reloadUsers(): void {
+    this.loadUsers();
   }
 }
