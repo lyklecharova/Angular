@@ -1,3 +1,5 @@
-<div class="btn">
-    <app-spinner/>
+<div class="user-list-wrapper">
+    <div *ngFor="let users of userList">
+        <h3>{{users.username}}</h3>
+    </div>
 </div>
