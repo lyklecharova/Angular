@@ -5,9 +5,9 @@ import { TodoListComponent } from './todo/todo-list/todo-list.component';
 
 // configuration routes
 const routes: Routes = [
-  { path: '/', component:UserListComponent},
-  { path: '/user-list', component:UserListComponent},
-  { path: '/todo-list', component:TodoListComponent},
+  { path: '',pathMatch: "full", component:UserListComponent},
+  { path: 'user-list', component:UserListComponent},
+  { path: 'todo-list', component:TodoListComponent},
 ];
 
 @NgModule({
