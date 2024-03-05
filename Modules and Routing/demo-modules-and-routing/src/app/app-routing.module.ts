@@ -5,7 +5,7 @@ import { TodoListComponent } from './todo/todo-list/todo-list.component';
 
 // configuration routes
 const routes: Routes = [
-  { path: '',pathMatch: "full", component:UserListComponent},
+  { path: '',pathMatch: "full", redirectTo: 'user-list'},
   { path: 'user-list', component:UserListComponent},
   { path: 'todo-list', component:TodoListComponent},
 ];
