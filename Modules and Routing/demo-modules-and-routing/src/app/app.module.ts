@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
+import { TodoModule } from './todo/todo.module';
 
 
 @NgModule({
@@ -15,9 +16,10 @@ import { UserModule } from './user/user.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CoreModule,
     UserModule,
-    HttpClientModule
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
