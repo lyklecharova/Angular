@@ -10,6 +10,7 @@ import { ThemesListComponent } from './themes-list/themes-list.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { NewThemeComponent } from './theme/new-theme/new-theme.component';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { NewThemeComponent } from './theme/new-theme/new-theme.component';
     AppRoutingModule,
     CoreModule,
     AppRoutingModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
