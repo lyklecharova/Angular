@@ -8,6 +8,9 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { ThemeComponent } from './theme/theme.component';
 import { ThemesListComponent } from './themes-list/themes-list.component';
 import { CoreModule } from './core/core.module';
+import { HomeComponent } from './home/home.component';
+import { NewThemeComponent } from './theme/new-theme/new-theme.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { CoreModule } from './core/core.module';
     MainComponent,
     PostsListComponent,
     ThemeComponent,
-    ThemesListComponent
+    ThemesListComponent,
+    HomeComponent,
+    NewThemeComponent
+    
   ],
   imports: [
     BrowserModule,

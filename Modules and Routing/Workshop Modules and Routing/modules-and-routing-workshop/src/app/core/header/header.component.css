@@ -2,10 +2,7 @@
 
 header {
     background: rgb(0, 128, 182);
-    background: linear-gradient(0deg,
-            rgba(0, 128, 182, 1) 0%,
-            rgba(0, 128, 182, 1) 35%,
-            rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(0, 128, 182, 1) 0%, rgba(0, 128, 182, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 header ul {
@@ -30,8 +27,8 @@ header ul span {
 
 header li {
     list-style: none;
-    margin: 0.35em;
-    padding: 0 0.95em;
+    margin: .35em;
+    padding: 0 .95em;
 }
 
 header a {
@@ -51,8 +48,8 @@ nav {
 }
 
 .logo-wrap {
-    font-family: "Parisienne", cursive;
-    letter-spacing: 0.5em;
+    font-family: 'Parisienne', cursive;
+    letter-spacing: .5em;
     margin: 0.5em 0;
 }
 
@@ -74,5 +71,5 @@ nav {
 
 .mini-navbar ul li+li {
     border-left: 1px solid lightgrey;
-    padding-left: 0.5em;
+    padding-left: .5em;
 }
