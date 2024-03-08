@@ -4,12 +4,12 @@ import { UserService } from '../user/user.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService) {}
 
-  get isLoggedIn():boolean{
+  get isLoggedIn(): boolean {
     return this.userService.isLogged;
   }
 }
