@@ -5,6 +5,7 @@ import { ThemeRoutingModule } from './theme-routing.module';
 import { ThemesListComponent } from './themes-list/themes-list.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { MainComponent } from './main/main.component';
+import { WellcomeMsgComponent } from '../shared/wellcome-msg/wellcome-msg.component';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { MainComponent } from './main/main.component';
     CurrentThemeComponent,
     ThemesListComponent,
     PostsListComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     CommonModule,
