@@ -5,8 +5,8 @@ import { Theme } from 'src/app/types/theme';
 
 @Component({
   selector: 'app-current-theme',
-  templateUrl: './current-theme.component.html',
-  styleUrls: ['./current-theme.component.css'],
+  templateUrl: './current-theme.component.html', 
+  styleUrls: ['./current-theme.component.css']
 })
 export class CurrentThemeComponent implements OnInit {
   theme = {} as Theme;
